@@ -2,16 +2,17 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import {
-  // Main Pages Components
+  // Main Pages
   Main, Dashboard,
   //Admin Components 
   Principal,
   //Companies/Accounts Components
-  Page, PA, Caixa, Partners, 
+  PA, Caixa, Partners, 
   //New Asset Component
   NewAsset,
-  //New Company
-  NewCompany, Company, Partner, 
+  // Company Components
+  NewCompany, Company, Partner, ViewCompany,
+  // End Main Pages
   // Auth Components
   Auth, Login, FirstAccess,
 } from './views';
@@ -29,7 +30,6 @@ export const router = new VueRouter({
         { path: 'home', component: Dashboard },
         { path: 'admin', component: Principal},
         { path: 'partners', component: Partners },
-        { path: 'page', component: Page },
         { path: 'newasset', component: NewAsset},
 
         { path: 'plainacc', component: PA, children: [
@@ -39,6 +39,7 @@ export const router = new VueRouter({
         {
           path: 'company', component: NewCompany, children: [
             { path: '', component: Company },
+            { path: ':id', component: ViewCompany },
             { path: 'partner', component: Partner },
 
           ]
