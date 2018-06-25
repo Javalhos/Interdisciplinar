@@ -1,16 +1,15 @@
 <template>
   <div class="col-md-12">
     <div class="row">
-      <div class="container m-4">
-        <div class="card mt-1">
-          <h5 class="ml-3 mt-3">CADASTRO DE EMPRESAS</h5>
-          <hr>
-          <ul class="nav nav-tabs">
+      <div class="container">
+        <div class="card mt-3">
+          <h3 class="card-header">CADASTRO DE EMPRESAS</h3>
+          <ul class="nav nav-tabs mt-2">
             <li class="nav-item">
-              <router-link to="/company/new" class="nav-link" exact>Dados da Empresa</router-link>
+              <router-link to="/company" class="nav-link nav-text-link" exact>Dados da Empresa</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/company/partner" class="nav-link" exact>Vincular Sócios</router-link>
+              <router-link to="/company/partner" class="nav-link nav-text-link" exact>Vincular Sócios</router-link>
             </li>
           </ul>
           <router-view></router-view>      

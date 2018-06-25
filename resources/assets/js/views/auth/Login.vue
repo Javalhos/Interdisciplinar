@@ -1,28 +1,16 @@
 <template>
-  <div class="row mr-0">
-    <div class="offset-4 col-sm-4 offset-4 align">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title text-center">
-            <h1>Anima</h1>
-          </div>
-          <form class="form-group" @submit.prevent="login">
-            <input type="email" 
-            :class="{'form-control mt-5': true, 'is-invalid': !!errors.email}"
-            placeholder="E-mail address"
-            v-model="form.email">
-            <input type="password" 
-            :class="{'form-control mt-2': true, 'is-invalid': !!errors.password}" 
-            placeholder="Password"
-            v-model="form.password"> 
+  <form class="form-group" @submit.prevent="login">
+    <input type="email" 
+    :class="{'form-control mt-5': true, 'is-invalid': !!errors.email}"
+    placeholder="E-mail address"
+    v-model="form.email">
+    <input type="password" 
+    :class="{'form-control mt-2': true, 'is-invalid': !!errors.password}" 
+    placeholder="Password"
+    v-model="form.password"> 
 
-            <button type="submit" class="btn btn-primary btn-block">Confirm</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
+    <button type="submit" class="btn btn-primary btn-block mt-3">Confirm</button>
+  </form>
 </template>
 
 <script>

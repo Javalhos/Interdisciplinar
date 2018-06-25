@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="registerAdmin">
-    <p>
+    <p class="text-center">
       Seja bem vindo ao Sistema Anima.
       Por favor, cadastre sua Conta de Administrador abaixo:
     </p>
@@ -11,7 +11,7 @@
         v-model="form.username">
     </div>
 
-    <div class="form-group"></div>
+    <div class="form-group">
       <input type="email"
         :class="{'form-control mb-3': true, 'is-invalid': !!errors.email}"
         placeholder="E-mail"

@@ -10422,6 +10422,10 @@ body {
   height: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* Color theme logo	 */
 
 .brand-img {
@@ -10438,6 +10442,10 @@ body {
 .nav-link-text,
 .ak-a {
   color: #fff;
+}
+
+.nav-text-link {
+  color: #495057;
 }
 
 /* Second level items */

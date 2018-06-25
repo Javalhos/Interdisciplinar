@@ -1,11 +1,5 @@
 <template>
   <div class="container-fluid h-100 w-100" style="background-color: #293f54">
-    <div class="col p-0">
-				<div class="nav_menu">
-					<ul class="nav justify-content-end">
-						
-					</ul>
-				</div>
     <div class="row align-items-center h-100">
       <div class="col-md-4 mr-auto ml-auto">
         <div class="card shadow">

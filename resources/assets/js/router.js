@@ -3,9 +3,15 @@ import VueRouter from 'vue-router';
 
 import {
   // Main Pages Components
-  Main, Dashboard, Test,
+  Main, Dashboard,
+  //Admin Components 
+  Principal,
+  //Companies/Accounts Components
+  Page, PA, Caixa, Partners, 
+  //New Asset Component
+  NewAsset,
   //New Company
-  NewCompany, Company, Partner,
+  NewCompany, Company, Partner, 
   // Auth Components
   Auth, Login, FirstAccess,
 } from './views';
@@ -19,13 +25,21 @@ export const router = new VueRouter({
   routes: [
     {
       path: '/', component: Main, children: [
+
         { path: 'home', component: Dashboard },
-        { path: 'test', component: Test },
+        { path: 'admin', component: Principal},
+        { path: 'partners', component: Partners },
+        { path: 'page', component: Page },
+        { path: 'newasset', component: NewAsset},
+
+        { path: 'plainacc', component: PA, children: [
+          { path: '', component: Caixa }
+        ] },
+
         {
           path: 'company', component: NewCompany, children: [
             { path: '', component: Company },
-            { path: 'new', component: Company },
-            { path: 'partner', component: Partner }
+            { path: 'partner', component: Partner },
 
           ]
         }

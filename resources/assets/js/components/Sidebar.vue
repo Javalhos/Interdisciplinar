@@ -3,12 +3,14 @@
 	<div class="col-2 pl-0 mr-0 pr-0 app-sidebar">
 		<div class="nav-sidebar-items">
 			<a class="brand" href="#">
-				<img class="brand-img" src="img/abstergo_logo.png">ANIMA</a>
+				<img class="brand-img" src="../../images/logo.png">
+				<span>Anima</span>	
+			</a>
 			<ul class="nav flex-column">
 			
       <!-- DASHBOARD -->
 			  <li class="nav-item ak-dashboard-color">
-				  <a class="nav-link" href="#">Dashboard</a>
+				  <router-link class="nav-link" to="/home">Dashboard</router-link>
 				</li>
 				
       <!-- EMPRESAS -->
@@ -21,7 +23,7 @@
 							<a class="ak-a" href="#">Empresa 1</a>
 						</li>
 						<li class="ak-emp2-color">
-							<a class="ak-a" href="#">Empresa 2</a>
+							<router-link class="ak-a" to="/company">Nova empresa</router-link>
 						</li>
 					</ul>
 				</li>
@@ -29,16 +31,16 @@
       <!-- CONTAS -->
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Example Pages">
 					<a class="nav-link ak-contas-color nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion" aria-expanded="false">
-						<span class="nav-link-text">Gerenciar Contas</span>
+						<router-link to="/admin" class="nav-link-text">Gerenciar Contas</router-link>
 					</a>
-					<ul class="sidenav-second-level collapse" id="collapseExamplePages" style="">
+					<!-- <ul class="sidenav-second-level collapse" id="collapseExamplePages" style="">
 						<li>
 							<a class="ak-a" href="#">Todas as Contas</a>
 						</li>
 		  			<li>
 							<a class="ak-a" href="#">Alterar</a>
 						</li>
-					</ul>
+					</ul> -->
 				</li>
 		
     	<!-- Relatórios -->

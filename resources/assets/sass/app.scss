@@ -12,6 +12,10 @@ body {
   height: 100%;
 }
 
+ul {
+	list-style-type: none;
+}
+
 // .app-sidebar {
 //  height: 100vh;
 // }
@@ -34,6 +38,10 @@ body {
 
 .nav-link, .nav-link-text, .ak-a {
 	color: #fff;
+}
+
+.nav-text-link {
+	color: #495057;
 }
 
 /* Second level items */
