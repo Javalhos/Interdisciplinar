@@ -1,4 +1,4 @@
-// Main Components
+//-- Main Components
 export { default as Main } from './Main.vue';
 //-- Dashboard
 export { default as Dashboard } from './Dashboard.vue';
@@ -6,12 +6,13 @@ export { default as Dashboard } from './Dashboard.vue';
 
 //-- Accounts Components 
 export { default as PA } from './accounts/PlainAccount.vue';
-export { default as Partners } from './accounts/NewPartners.vue';
 //---- Plain pages Components 
-export { default as Caixa } from './accounts/plain/Caixa.vue';
+export { default as Banco } from './accounts/plain/Banco.vue';
+export { default as NewBanco } from './accounts/plain/NewBanco.vue';
+export { default as Asset } from './accounts/plain/Asset.vue';
 //End Accounts Components
 
-// -- New Asset Component
+//-- New Asset Component
 export { default as NewAsset } from './asset/NewAsset.vue';
 //End Asset Component
 
@@ -22,12 +23,19 @@ export { default as Company } from './company/Company.vue';
 export { default as Partner } from './company/Partner.vue';
 // End Main Components
 
-//Admin Components
+//-- Admin Components
 export { default as Principal } from './admin/Principal.vue';
 //End Admin Components
 
-// Auth Components
+//-- Auth Components
 export { default as Auth } from './Auth';
 export { default as Login } from './auth/Login.vue';
 export { default as FirstAccess } from './auth/FirstAccess.vue'
 // End Auth Components
+
+//-- Report Components
+export { default as Report } from './reports/Report.vue';
+export { default as Assets } from './reports/ReportAssets.vue';
+export { default as Depre } from './reports/ReportDepre.vue';
+export { default as RCompanies } from './reports/ReportCompanies.vue'; 
+// End Report Components

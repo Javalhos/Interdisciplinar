@@ -7,14 +7,15 @@ import {
   //Admin Components 
   Principal,
   //Companies/Accounts Components
-  PA, Caixa, Partners, 
+  PA, Banco, NewBanco, Asset,
   //New Asset Component
   NewAsset,
   // Company Components
   NewCompany, Company, Partner, ViewCompany,
-  // End Main Pages
   // Auth Components
   Auth, Login, FirstAccess,
+  // Report Components
+  Report, Assets, Depre, RCompanies
 } from './views';
 
 Vue.use(VueRouter);
@@ -29,19 +30,27 @@ export const router = new VueRouter({
 
         { path: 'home', component: Dashboard },
         { path: 'admin', component: Principal},
-        { path: 'partners', component: Partners },
         { path: 'newasset', component: NewAsset},
 
         { path: 'plainacc', component: PA, children: [
-          { path: '', component: Caixa }
+          { path: 'banco', component: Banco },
+          { path: 'newbanco', component: NewBanco},
+          { path: 'asset', component: Asset }
         ] },
 
         {
-          path: 'company', component: NewCompany, children: [
-            { path: '', component: Company },
+          path: 'company', component: Company, children: [
+            { path: '', component: NewCompany },
             { path: ':id', component: ViewCompany },
             { path: 'partner', component: Partner },
 
+          ]
+        },
+        {
+          path: '/report', component: Report, children: [
+            { path: 'assets', component: Assets },
+            { path: 'depreciation', component: Depre },
+            { path: 'companies', component: RCompanies }
           ]
         }
       ]

@@ -88,25 +88,7 @@
             </div>
           </div>
             <div class="card-body" v-else>
-              <div class="form-row"><!-- Nome e E-mail sócio-->
-                <div class="form-group col-6">
-                  <label for="" class="form-control-label mb-0">Nome do sócio</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group col-6">
-                  <label for="" class="form-control-label mb-0">E-mail</label>
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-6">
-                  <label for="" class="form-control-label mb-0">CPF</label>
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-
-              <table class="table text-center">
+              <table class="table border text-center">
                 <thead>
                 <tr>
                   <th scope="col">Cód.</th>
@@ -116,27 +98,13 @@
                   <th scope="col"></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="text-center">
                   <tr>
                     <th scope="row">1</th>
                     <td></td>
                     <td></td>
-                    <td>Alterar/Incluir</td>
-                    <td>Excluir</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><button class="btn btn-warning"><i class="fas fa-plus"></i></button></td>
+                    <td><button class="btn btn-danger"><i class="far fa-trash-alt"></i></button></td>
                   </tr>
                 </tbody>
               </table>

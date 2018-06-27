@@ -39,13 +39,13 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti" style="">
             <li>
-              <a class="ak-a" href="#">Relatório 1</a>
+              <router-link class="ak-a" to="/report/assets">Todos os bens</router-link>
             </li>
             <li>
-              <a class="ak-a" href="#">Relatório 2</a>
+              <router-link class="ak-a" to="/report/depreciation">Todas as depreciações</router-link>
             </li>
             <li>
-              <a class="ak-a" href="#">Relatório 3</a>
+              <router-link class="ak-a" to="/report/companies">Todas as empresas</router-link>
             </li>
           </ul>
         </li>
