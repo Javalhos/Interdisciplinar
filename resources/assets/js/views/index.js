@@ -5,10 +5,9 @@ export { default as Dashboard } from './Dashboard.vue';
 //End Dashboard Components
 
 //-- Accounts Components 
-export { default as PA } from './accounts/PlainAccount.vue';
+export { default as AccountPlan } from './accounts/AccountPlan.vue';
+export { default as NewAccount } from './accounts/NewAccount.vue';
 //---- Plain pages Components 
-export { default as Banco } from './accounts/plain/Banco.vue';
-export { default as NewBanco } from './accounts/plain/NewBanco.vue';
 export { default as Asset } from './accounts/plain/Asset.vue';
 //End Accounts Components
 

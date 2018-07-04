@@ -1,0 +1,12 @@
+.app-input-password-icon {
+  input {
+    border-right-color: transparent;
+  }
+  .input-group-append {
+    cursor: pointer;
+  }
+  .input-group-text {
+    border-left-color: transparent;
+    background-color: #fff;
+  }
+}

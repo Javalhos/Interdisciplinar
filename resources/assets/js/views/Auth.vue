@@ -6,6 +6,7 @@
           <div class="card-body">
             <div class="card-title text-center">
               <h1>Anima</h1>
+              <hr>
             </div>
 
             <router-view></router-view>

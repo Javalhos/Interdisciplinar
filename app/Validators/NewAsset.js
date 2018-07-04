@@ -3,16 +3,16 @@
 class NewAsset {
   get rules () {
     return {
-      company_id: 'required|number',
-      account_id: 'required|number',
+      company_id: 'required|regex:\\d*',
+      account_id: 'required|regex:\\d*',
       name: 'required',
       suffers: 'required',
       use: 'required',
       register_date: 'required',
       type: 'required',
-      deprecation: 'required|number',
-      life_time: 'required|number',
-      value: 'required|number'
+      deprecation: 'required|regex:\\d*',
+      life_time: 'required|regex:\\d*',
+      value: 'required|regex:\\d*'
     }
   }
 
@@ -23,7 +23,7 @@ class NewAsset {
   get messages() {
     return {
       'required': 'O preenchimento deste campo é obrigatório.',
-      'number': 'Apenas números serão aceitos neste campo.'
+      'regex': 'Apenas números serão aceitos neste campo.'
     }
   }
 

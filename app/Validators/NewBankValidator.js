@@ -3,11 +3,12 @@
 class NewBankValidator {
   get rules () {
     return {
-      type: 'required',
-      owner_account: 'required',
-      account: 'required|number',
-      agency: 'required|number',
-      account_value: 'required|number'
+      company_id: 'required|regex:\\d*',
+      type: 'required|in:Imobilizado',
+      bank: 'required|in:Banco do Brasil,Itaú,Santander,Bradesco',
+      account: 'required|regex:\\d*',
+      agency: 'required|regex:\\d*',
+      balance: 'required|regex:\\d*'
     }
   }
 
@@ -18,7 +19,8 @@ class NewBankValidator {
   get messages() {
     return {
       'required': 'É obrigatório o preenchimento deste campo.',
-      'number': 'Apenas números serão aceitos neste campo.'
+      'regex': 'Apenas números serão aceitos neste campo.',
+      'in': 'Insira um valor válido!'
     }
   }
 

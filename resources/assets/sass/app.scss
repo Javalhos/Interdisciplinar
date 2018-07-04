@@ -1,3 +1,4 @@
+@import 'murilo';
 @import 'variables';
 @import '~bootstrap/scss/bootstrap';
 // Clear
@@ -19,52 +20,59 @@ ul {
 // .app-sidebar {
 //  height: 100vh;
 // }
-
 /* Color theme logo	 */
+
 // .color {
 // 	color: #00afff, #00dbff, #ffcb00, #ff9f00, #ff3000;
 // }
-
 .brand-img {
-	max-width: 50px;
-	max-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
 }
 
-.navbar{
-	background-color:#293f54;
-	width: 100%;
-
+.navbar {
+  background-color: #293f54;
+  width: 100%;
 }
 
-.nav-link, .nav-link-text, .ak-a {
-	color: #fff;
+.app-sidebar {
+  .nav-link,
+  .nav-link-text,
+  .ak-a {
+    color: #fff;
+  }
+  
+  .nav-link :hover {
+    color: #c9c9c9;
+  }
+  /* Second level items */
+
+  .nav-item :hover {
+    color: #c9c9c9;
+  }
+
+  .nav-link-text :hover {
+    color: #c9c9c9;
+  }
 }
 
+.nav-text-link:hover {
+	color: #3e4246;
+}
 .nav-text-link {
 	color: #495057;
 }
 
-/* Second level items */
-.nav-item :hover {
-	color: #c9c9c9;
-}
 
-.nav-link-text :hover {
-	color: #c9c9c9;
-}
 
-.nav-link :hover {
-	color: #c9c9c9;
-}
 
 a.brand {
-	color: #fff;
+  color: #fff;
 }
 
 .nav-sidebar-items {
-	background-color: #293f54;
-	height: 100vh;
-
+  background-color: #293f54;
+  height: 100vh;
 }
 
 // .container-fluid {
@@ -74,58 +82,55 @@ a.brand {
 // 	margin-right: auto;
 // 	margin-left: auto;
 // }
-
 .nav_menu {
-	background-color: rgba(223, 223, 223, 0.685);
-	max-height: 40px;
-	border-bottom: 1px solid rgba(41, 63, 84, 0.184);
-
+  background-color: rgba(223, 223, 223, 0.685);
+  max-height: 40px;
+  border-bottom: 1px solid rgba(41, 63, 84, 0.184);
 }
 
-.nav-link-top{
-	color: #293f54;
-	padding: 40px;
+.nav-link-top {
+  color: #293f54;
+  padding: 40px;
 }
 
 .ak-dashboard-color {
-	border-right: 10px solid #006DFF;
+  border-right: 10px solid #006DFF;
 }
 
 .ak-empresa-color {
-	border-right: 10px solid #ff3000;
+  border-right: 10px solid #ff3000;
 }
 
 .ak-emp1-color {
-	border-right: 10px solid #ff603d;
+  border-right: 10px solid #ff603d;
 }
 
 .ak-emp2-color {
-	border-right: 10px solid #ff7758;
+  border-right: 10px solid #ff7758;
 }
 
-
 .ak-contas-color {
-	border-right: 10px solid #ff9f00;
+  border-right: 10px solid #ff9f00;
 }
 
 .ak-relatorios-color {
-	border-right: 10px solid #00dbff;
+  border-right: 10px solid #00dbff;
 }
 
 .ak-card {
-	display: flex;
-	justify-content: space-around;
-	margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }
+
 .ak-card-1 {
-	background-image: -webkit-linear-gradient(90deg, rgba(0, 110, 255, 0.253) 0%, rgba(245, 232, 235, 0.33725490196078434) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgba(0, 110, 255, 0.253) 0%, rgba(245, 232, 235, 0.33725490196078434) 100%);
 }
 
 .ak-card-2 {
-	background-image: -webkit-linear-gradient(90deg, rgba(245, 232, 235, 0.33725490196078434) 0%, #ff2f0056 100%);
+  background-image: -webkit-linear-gradient(90deg, rgba(245, 232, 235, 0.33725490196078434) 0%, #ff2f0056 100%);
 }
 
 .ak-card-3 {
-	background-image: -webkit-linear-gradient(90deg, #ff2f0056 0%, #ff9f0056 100%);
+  background-image: -webkit-linear-gradient(90deg, #ff2f0056 0%, #ff9f0056 100%);
 }
-

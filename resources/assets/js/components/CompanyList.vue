@@ -7,7 +7,9 @@
       <li class="ak-emp1-color"
         v-for="company in companies"
         :key="company.id">
-        <router-link class="ak-a" :to="`/company/${company.id}`">
+        <router-link
+          class="ak-a"
+          :to="`/company/${company.id}`">
           {{ company.name }}
         </router-link>
       </li>
@@ -20,25 +22,35 @@
 </template>
 
 <script>
+import { get } from '../helpers/Api.js';
+import Event from '../helpers/Event.js';
+
 export default {
   data() {
     return {
-      companies: [
-        {
-          name: 'Asabilita',
-          id: 1
-        },
-        {
-          name: 'Ferramentex',
-          id: 2
-        }
-      ]
+      loading: false,
+      companies: []
     }
   },
-
+  methods: {
+    loadCompanies() {
+      // Carrega Empresas do BackEnd
+      this.loading = true;
+      get('/company')
+        .then(res => {
+          this.companies = res.data.companies;
+        })
+        .catch(err => {
+          console.error(err);
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    }
+  },
   mounted() {
-    // Carrega Empresas do BackEnd  
-
+    this.loadCompanies();
+    Event.listen('company-added', (data) => { this.loadCompanies(); });
   }
 }
 </script>

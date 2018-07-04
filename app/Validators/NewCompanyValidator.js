@@ -3,19 +3,21 @@
 class NewCompanyValidator {
   get rules () {
     return {
-      company_id: 'required',
-      company_name: 'required',
+      name: 'required',
       social_name: 'required',
-      cnpj: 'required|number',
-      number: 'required|number',
-      complement: '',
+      cnpj: 'required|regex:\\d*',
+      address: 'required',
       neighborhood: 'required',
       city: 'required',
-      cep: 'required|number',
+      zip: 'required|regex:\\d{8}',
       uf: 'required|max:2',
-      tel_secondary: 'required|number',
-      tel_principal: 'required|number',
-      email: 'required|email'
+      tel_primary: 'required|regex:\\d*',
+      tel_secondary: 'regex:\\d*',
+      email: 'email',
+      partners: 'array',
+      'partners.*.name': 'requiredIf:partners',
+      'partners.*.cpf': 'requiredIf:partners|regex:\\d{11}',
+      'partners.*.telephone': 'requiredIf:partners|regex:\\d*'
     }
   }
 
@@ -27,8 +29,8 @@ class NewCompanyValidator {
     return {
       'required': 'O preenchimento deste campo é obrigatório.',
       'email': 'Insira um e-mail válido. Ex: xxx@xxx.xxx',
-      'max': 'Você não pode inserir mais do que 2 caracteres neste campo.',
-      'number': 'Apenas números serão aceitos neste campo.'
+      'max': 'Você não pode inserir mais do que {{ argument.0 }} caracteres neste campo.',
+      'regex': 'Apenas números serão aceitos neste campo.'
     }
   }
 

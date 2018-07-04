@@ -6,28 +6,29 @@ class AssetSchema extends Schema {
   up() {
     this.create('assets', (table) => {
       table.increments()
-      table.integer('company_id').required()
-      table.ingeger('account_id').required()
-      table.string('name', 100)
+      table.integer('company_id').notNullable()
+      table.integer('account_id').notNullable()
+      table.string('name', 100).notNullable()
+      table.text('description').defaultTo('')
       table.enum('suffers', [
         'depreciation',
         'amortization'
-      ]).defaultsTo('depreciation')
+      ]).defaultTo('depreciation').notNullable()
       table.enum('use', [
         'administrative',
         'industrial'
-      ]).defaultsTo('administrative')
-      table.integer('register_date')
+      ]).defaultTo('administrative').notNullable()
       table.enum('type', [
         'property',
         'furniture',
         'vehicle',
         'equipment',
         'brand'
-      ])
-      table.integer('depreciation_rate')
-      table.integer('life_time')
-      table.float('value')
+      ]).notNullable()
+      table.date('buy_date').notNullable()
+      table.integer('depreciation_rate').notNullable()
+      table.integer('life_time').notNullable()
+      table.float('value').notNullable()
       table.timestamps()
     })
   }

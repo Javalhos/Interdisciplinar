@@ -3,7 +3,7 @@
 const Model = use('Model')
 
 class User extends Model {
-  static boot () {
+  static boot() {
     super.boot()
 
     /**
@@ -26,17 +26,12 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tokens () {
+  tokens() {
     return this.hasMany('App/Models/Token')
   }
 
-  json() {
-    return {
-      id: this.id,
-      username: this.username,
-      email: this.email,
-      senha: this.password
-    };
+  static get hidden() {
+    return ['password'];
   }
 }
 

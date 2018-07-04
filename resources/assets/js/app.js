@@ -1,7 +1,10 @@
 import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue';
 
 import App from './App.vue';
 import { router } from './router.js';
+
+Vue.use(BootstrapVue);
 
 try {
   window.$ = window.jQuery = require('jquery');
@@ -18,3 +21,4 @@ new Vue({
   components: { App },
   router
 });
+window.$('[data-toggle="tooltip"]').tooltip();
